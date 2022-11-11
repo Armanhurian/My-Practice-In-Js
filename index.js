@@ -2,7 +2,7 @@ let myTitle = document.getElementById('title')
 
 let mylist = document.querySelectorAll('.mydev')
 
-//let ullist =document.getElementsByTagName('li')
+//let ullist =document.getElementsByTagName('ul')
 
 //let firstlist =document.querySelector('.mydev')
 
@@ -31,3 +31,22 @@ console.log(myTitle.textContent)
 let selectBox=document.getElementById('selectBox')
 
 console.log(selectBox.value)
+
+let liCreate= document.createElement('li')
+
+liCreate.innerHTML='PhP'
+
+let ullist= document.querySelector('ul')
+
+console.log(ullist)
+
+//ullist.append(liCreate)
+
+ullist.appendChild(liCreate)
+
+function clickFunc() {
+    
+    myTitle.style.color='green'
+ 
+}
+
