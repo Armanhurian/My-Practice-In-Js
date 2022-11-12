@@ -50,3 +50,34 @@ function clickFunc() {
  
 }
 
+let bulbOff = document.getElementById('bulboff')
+
+let btn =document.getElementById('btn')
+
+let bulbflag = false
+
+function turnOffOrOn (){
+    if(!bulbflag){
+        bulbOff.setAttribute('src','pic/pic_bulbon.gif')
+        btn.innerHTML = 'Turn Off'
+        bulbflag=true
+    }else{
+        bulbOff.setAttribute('src','pic/pic_bulboff.gif')
+        btn.innerHTML = 'Turn On'
+        bulbflag=false
+        
+    }
+}
+
+let username = document.getElementById('username')
+
+let password = document.getElementById('password')
+
+function checkLogin(){
+    if(username.value.length <12 || password.value.length<8){
+      alert('یوزرنیم یا پسورد شما اشتباه است')
+    }else{
+      alert('شما وارد شدید ')
+    }
+}
+
