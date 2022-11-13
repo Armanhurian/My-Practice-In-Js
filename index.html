@@ -40,12 +40,18 @@
 
 <button id="btn" onclick="turnOffOrOn ()" >Turn Off</button>
 <hr/>
-<div>
-    <input id="username" type="text" value="UserName">
+<div >
+    <input onkeydown="keyUserLog()" id="username" type="text" value="UserName">
+    <p class="textUserError ">یوزرنیم کمتر از 12 کارکتر دارد!</p>
     <hr/>
-    <input id="password" type="password" value="Password">
+    <input onkeyup="keyPassLog()" id="password" type="password" value="Password">
+    <p class="textPassError ">پسوورد کمتر از 8 کارکتر دارد!</p>
     <hr/>
     <button onclick="checkLogin()">Confirm</button>
+    
+    <div  class="modal">
+      
+    </div>
 </div>
 
 

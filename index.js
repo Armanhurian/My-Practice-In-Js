@@ -73,11 +73,44 @@ let username = document.getElementById('username')
 
 let password = document.getElementById('password')
 
+let modal = document.querySelector('.modal') 
+
+let textUserError =document.querySelector('.textUserError')
+
+let textPassError =document.querySelector('.textPassError')
+
+
+
+
+function keyUserLog(){
+    if(username.value.length>=12){
+        textUserError.style.display='none'  
+    }
+}
+
+function keyPassLog(){
+
+    if(password.value.length>=8){
+    textPassError.style.display='none'
+    }
+}
+
+
 function checkLogin(){
     if(username.value.length <12 || password.value.length<8){
-      alert('یوزرنیم یا پسورد شما اشتباه است')
+         modal.style.background='red'
+         modal.innerHTML='username or password is not defind'
+         modal.style.display='block'
+         setTimeout(function(){
+         modal.style.display='none'   
+         },'3000')
     }else{
-      alert('شما وارد شدید ')
+         modal.style.background='green'
+         modal.innerHTML='your join is successfully'   
+         modal.style.display='block'
+         setTimeout(function(){
+         modal.style.display='none'   
+         },'3000')
     }
 }
 

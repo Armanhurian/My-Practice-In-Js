@@ -1,0 +1,16 @@
+.modal{
+
+    position: absolute;
+    top:42rem ;
+    display: none;
+    justify-content: end;
+    color: white;
+}
+
+.textUserError{
+    color: red;
+}
+
+.textPassError{
+    color: rgb(189, 29, 29);
+}
