@@ -83,15 +83,28 @@ let textPassError =document.querySelector('.textPassError')
 
 
 function keyUserLog(){
-    if(username.value.length>=12){
-        textUserError.style.display='none'  
+    if(username.value.length<12){
+        textUserError.style.display='block'
+        textUserError.innerHTML =' یوزرنیم کمتر از 12 کارکتر دارد ' 
+        textUserError.style.color='red'
+    }else{
+        textUserError.style.display='block'
+        textUserError.innerHTML =' یوزرنیم به حد نصاب رسید ' 
+        textUserError.style.color='green'
+
     }
 }
 
 function keyPassLog(){
 
-    if(password.value.length>=8){
-    textPassError.style.display='none'
+    if(password.value.length<8){
+    textPassError.style.display='block'
+    textPassError.innerHTML =' پسوورد کمتر از 8 کارکتر دارد ' 
+    textPassError.style.color='red'
+    }else{
+    textPassError.style.display='block'
+    textPassError.innerHTML =' پسوورد به حد نصاب رسید ' 
+    textPassError.style.color='green'   
     }
 }
 

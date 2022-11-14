@@ -9,8 +9,10 @@
 
 .textUserError{
     color: red;
+    display: none;
 }
 
 .textPassError{
-    color: rgb(189, 29, 29);
+    color: red;
+    display: none;
 }
