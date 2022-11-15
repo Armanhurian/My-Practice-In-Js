@@ -26,10 +26,11 @@
    
 </ul>
 
-<select name="" id="selectBox">
+<select name="" id="selectBox" onchange="onChangeContries()">
     <option value="iran">iran</option>
     <option value="german">german</option>
     <option value="italia">italia</option>
+    <option value="turkey">turkey</option>
 </select>
 
 <button onclick="clickFunc()">click me</button>
@@ -39,7 +40,9 @@
 <img id="bulboff" src="pic/pic_bulboff.gif" alt="bulboff">
 
 <button id="btn" onclick="turnOffOrOn ()" >Turn Off</button>
+
 <hr/>
+
 <div >
     <input onkeydown="keyUserLog()" id="username" type="text" value="UserName">
     <p class="textUserError ">یوزرنیم کمتر از 12 کارکتر دارد!</p>
@@ -53,6 +56,10 @@
     <div  class="modal">
       
     </div>
+</div>
+
+<div >
+    <h1 id="NameTitle" align="center">|Arman Hurian|</h1>
 </div>
 
 
