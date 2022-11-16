@@ -143,3 +143,39 @@ function onChangeContries(){
    console.log(selectBox.value) 
 }
 
+let citySelect = document.getElementById('CitySelect')
+
+let checkCities = document.getElementById('CheckCities')
+
+let objCity ={
+    Tehran :['gharchak','varamin','karaj','rey'],
+    Mazandaran :['Babol','Babolsar','Amol','Sari','Nowshahr'],
+    Gilan :['Anzali','Lahijan','Talesh','Rasht'],
+    Golestan :['Gorgan','Gonbad']
+}
+
+ 
+
+ console.log(checkCities)
+
+ citySelect.addEventListener('change',function(){
+
+    if(citySelect.value==='Please Select'){
+        checkCities.innerHTML=''
+        checkCities.innerHTML += '<option value:"item">Select City</option>'
+
+    }else{
+
+        console.log(objCity[citySelect.value])
+    
+        checkCities.innerHTML=''
+        
+        objCity[citySelect.value].forEach(function(item){
+            checkCities.innerHTML += '<option value:"item">' + item + '</option>'
+        })
+    }
+    
+
+})
+
+
