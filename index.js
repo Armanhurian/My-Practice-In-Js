@@ -164,6 +164,7 @@ let objCity ={
         checkCities.innerHTML=''
         checkCities.innerHTML += '<option value:"item">Select City</option>'
 
+
     }else{
 
         console.log(objCity[citySelect.value])
@@ -178,4 +179,30 @@ let objCity ={
 
 })
 
+let submitInput = document.getElementById('submitInput')
+
+submitInput.addEventListener('submit', function(event){
+   event.preventDefault()
+   console.log(event)
+})
+
+let h1Title = document.getElementById('h1title')
+
+console.log(h1Title.nodeType)
+
+let head1 = document.getElementById('head1')
+let head2 = document.getElementById('head2')
+let head3 = document.getElementById('head3')
+
+console.log(head1.nextElementSibling)
+
+
+let liList = document.querySelectorAll('.li-list')
+
+let returnItem = liList.forEach(function(item){
+  
+  item.addEventListener('click',function(event){
+    event.target.remove()
+  })
+})
 
