@@ -206,3 +206,33 @@ let returnItem = liList.forEach(function(item){
   })
 })
 
+function oncontextmenuHandler(){
+    console.log('right click')
+}
+
+let myTextArea = document.getElementById('myTextArea')
+
+function copyHandler(event){
+
+  console.log('copy')   
+}
+function cutHandler(event){
+  console.log('cut') 
+}
+function pasteHandler(event){
+  console.log('paste') 
+}
+
+////میتونیم با preventdefault  جلوی کار رو بگیریم چون که cancelable true هست
+
+myTextArea.addEventListener('copy',copyHandler)
+myTextArea.addEventListener('cut',cutHandler)
+myTextArea.addEventListener('paste',pasteHandler)
+
+
+let clickPageHandler = document.querySelector('.clickPageHandler')
+
+clickPageHandler.addEventListener('click',function(event){
+ console.log(event.pageX)
+ console.log(event.pageY)
+})
