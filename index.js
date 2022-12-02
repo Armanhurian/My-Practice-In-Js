@@ -232,7 +232,26 @@ myTextArea.addEventListener('paste',pasteHandler)
 
 let clickPageHandler = document.querySelector('.clickPageHandler')
 
-clickPageHandler.addEventListener('click',function(event){
- console.log(event.pageX)
- console.log(event.pageY)
+function myclickHandler(event){
+
+    console.log(event.pageX)
+    console.log(event.pageY)
+}
+
+clickPageHandler.addEventListener('mousemove',myclickHandler)
+
+let removeEventHandler = document.querySelector('.removeEventHandler')
+
+function myRemoveEventHandler(event){
+    clickPageHandler.removeEventListener('mousemove',myclickHandler)
+}
+removeEventHandler.addEventListener('click', myRemoveEventHandler)
+
+
+let counter = document.querySelector('.counter') 
+let inputLength = document.querySelector('.inputLength') 
+
+inputLength.addEventListener('keyup',function(){
+   let innerSpan =  inputLength.getAttribute('maxlength') - inputLength.value.length
+   counter.innerHTML=innerSpan
 })

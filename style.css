@@ -16,3 +16,9 @@
     color: red;
     display: none;
 }
+
+.counter{
+    background-color: white;
+    width: 30px;
+    height: 30px;
+}
