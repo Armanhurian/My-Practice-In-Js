@@ -255,3 +255,48 @@ inputLength.addEventListener('keyup',function(){
    let innerSpan =  inputLength.getAttribute('maxlength') - inputLength.value.length
    counter.innerHTML=innerSpan
 })
+
+
+function scrollHandler(){
+    console.log(document.documentElement.scrollTop)
+}
+
+document.addEventListener('scroll',scrollHandler)
+
+
+function scrollToHandler(){
+    window.scrollTo(0,0)
+}
+
+function scrollbYHandler(){
+    window.scrollBy(0,-100)
+}
+
+
+
+function clickDataHandler(event){
+  console.log(event.target.dataset.id , event.target.dataset.name);
+}
+
+let myAudio = document.querySelector('.myAudio')
+
+function clickPlayaAudio(){
+    myAudio.play()
+    console.log('play shod')
+}
+
+function pauseAudio(){
+    myAudio.pause()
+    console.log('pause shod')
+}
+
+function durationAudio(){
+    console.log('duration Audio is :',myAudio.duration)
+}
+function clickCurrentTimeAudio (){
+    console.log('current time is :',Math.floor(myAudio.currentTime))
+}
+function clickPlayRateAudio(){
+    myAudio.playbackRate= 2
+    console.log('audio speed : 2X')
+}
