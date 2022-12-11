@@ -22,3 +22,25 @@
     width: 30px;
     height: 30px;
 }
+
+.myBox{
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+    border: 4px solid blue;
+}
+
+.divAnimation{
+    width: 200px;
+    height: 120px;
+    border-radius: 20px;
+    background-color: cyan;
+    margin: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+@keyframes animate {
+    from{top: 0px;}
+    to{top:180px}
+}

@@ -300,3 +300,88 @@ function clickPlayRateAudio(){
     myAudio.playbackRate= 2
     console.log('audio speed : 2X')
 }
+
+function clickDragHandler(event){
+    event.dataTransfer.setData('dataEl',event.target.id)
+}
+
+function dropHandler(event){
+let getElemId  = event.dataTransfer.getData('dataEl')
+let getValue = document.getElementById(getElemId);
+event.target.append(getValue)
+}
+
+function dragoverHandler(event){
+  event.preventDefault()
+}
+
+let btnAnimate = document.querySelector('.btnAnimate')
+let divAnimation = document.querySelector('.divAnimation')
+let mypTag = document.querySelector('.mypTag')
+
+let divAnimationStyle = getComputedStyle(divAnimation)
+
+console.log(divAnimationStyle.width);
+
+
+function animationHandler(){
+    divAnimation.style.animation = ' animate 4s 3'
+}
+
+
+
+divAnimation.addEventListener('animationstart',function(){
+    console.log('animation start')
+    mypTag.innerHTML='animation start'
+})
+divAnimation.addEventListener('animationiteration',function(){
+    console.log('animation repeat')
+    mypTag.innerHTML='animation repeat'
+    
+})
+divAnimation.addEventListener('animationend',function(){
+    console.log('animation end')
+    mypTag.innerHTML='animation end'
+
+})
+
+
+try{
+    console.log(x);
+}catch(err){
+    console.log(err.name);
+    console.log(err.message);
+}
+
+let btnCatch = document.querySelector('.btnCatch')
+let inputCatch = document.querySelector('.inputCatch')
+let pElem = document.querySelector('.pElem')
+
+btnCatch.addEventListener('click',function(){
+
+    try{
+        if(inputCatch.value.length>8){
+            throw 'this value is High'
+        }else{
+            throw 'this value is Low'
+        }
+    }catch(err){
+        pElem.innerHTML = err 
+    }finally{
+        inputCatch.value = ''
+        inputCatch.focus()
+    }
+})
+
+let btnCssText = document.querySelector('.btnCssText')
+let pElemCssText = document.querySelector('.pElemCssText')
+
+
+function clickbtncssText(){
+    // pElemCssText.style.color = 'white'  
+    // pElemCssText.style.backgroundColor = 'red'  
+    // pElemCssText.style.fontSize = '30px'  
+
+    pElemCssText.style.cssText = 'color: white; background-color: red; font-size: 30px;'
+}
+btnCssText.addEventListener('click',clickbtncssText)

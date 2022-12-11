@@ -130,6 +130,27 @@
     <button onclick="clickCurrentTimeAudio()">Click current time</button>
     <button onclick="clickPlayRateAudio()">Click PlayRate 2X audio</button>
 
+    <br><br><br><br>
+
+    <h2 id="JvaScript" draggable="true" ondragstart="clickDragHandler(event)">JvaScript</h2>
+    <h2 id="React" draggable="true" ondragstart="clickDragHandler(event)">React</h2>
+    <h2 id="PhP" draggable="true" ondragstart="clickDragHandler(event)">PhP</h2>
+
+    <div ondrop="dropHandler(event)" ondragover="dragoverHandler(event)" class="myBox"></div>
+
+    <button class="btnAnimate" onclick="animationHandler()">show animation</button>
+    <div class="divAnimation">
+        let's go to the fullstack developer
+    </div>
+    <p class="mypTag">no animation</p>
+
+    <input type="text" class="inputCatch">
+    <button class="btnCatch" >check catch</button>
+    <p class="pElem"></p>
+
+    <button class="btnCssText">click cssText</button>
+    <p class="pElemCssText">cssText</p>
+
     <script src="index.js"></script>
 </body>
 </html>
