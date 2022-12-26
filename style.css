@@ -1,10 +1,15 @@
-.modal{
+:root{
+    --test-color : red;
+}
 
+
+.modal{
+    
     position: absolute;
     top:42rem ;
     display: none;
     justify-content: end;
-    color: white;
+    color:white;
 }
 
 .textUserError{

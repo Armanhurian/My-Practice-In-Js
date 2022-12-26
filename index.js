@@ -385,3 +385,254 @@ function clickbtncssText(){
     pElemCssText.style.cssText = 'color: white; background-color: red; font-size: 30px;'
 }
 btnCssText.addEventListener('click',clickbtncssText)
+
+
+document.documentElement.style.setProperty('--test-color' , 'green')
+console.log(document.documentElement.style.getPropertyValue('--test-color'));
+
+window.addEventListener('scroll',function(){
+    console.log(window.scrollY);
+    console.log(document.body.clientHeight);
+    console.log(window.innerHeight);
+    
+    console.log(document.body.clientWidth);
+    console.log(window.innerWidth);
+})
+//////////////////////////////////////////////
+// function User(){
+//     console.log('yes');
+// }
+// User()
+
+let User = ()=>{
+    console.log('yes');
+}
+
+User()
+///////////////////////////////////////////////
+// let sum = (num1,num2)=>{
+//     return (num1 + num2)*4
+// }
+let sum = (num1,num2) => (num1 + num2) *4 
+
+console.log('sum:',sum(4,2));
+
+//////////////////////////////////////////////
+
+let name = (id , name) => ({id : id , name : name})
+console.log(name(23,'arman'));
+
+/////////////////////////////////////////////
+
+let arrowExArray = [
+    {id:1 , name :'arman', age : 23},
+    {id:2 , name :'ali', age : 21},
+    {id:3 , name :'amin', age : 26},
+    {id:4 , name :'reza', age : 38},
+]
+
+arrowExArray.forEach((user)=> console.log(user.name))
+
+let mainUserFind = arrowExArray.find((user)=>user.name==='arman')
+console.log(mainUserFind);
+
+////////////////////////////////////////////////
+
+// function showValue(...arguments){
+    
+//     console.log(arguments);
+//     return arguments.reduce((prev,current)=>prev+current)
+//     //console.log(arguments[0]+arguments[1]+arguments[2]);
+// }
+// console.log(showValue(12,5,3,22,43,54,66,4,8));
+
+//////////////////////////////////////////////////
+
+let showValue = (...args)=>{
+   console.log(args);
+   return args.reduce((prev,current) => prev+current )
+}
+console.log('Sum:',showValue(12,5,3,4,2,4,2,5,4,3,3,5,3,4,36,6,5))
+//////////////////////////////////////////////////////
+let user1 = ['ali','amin','amir']
+let user2 = ['reza','arman','akbar']
+
+console.log(...user1)
+let alluser = [...user1,...user2]
+console.log(alluser);
+////////////////////////////////////
+
+function showUser(...users){
+   console.log(users);
+}
+
+showUser(...user1,...user2)
+
+
+
+//////////////////////////////////////////////////////////////'
+
+let myArr = [32,'arman',true,'ali',21]
+
+let [item1, ,item2 ,item3 ,item4] = myArr
+
+let [num1,num2,...others] = myArr
+
+console.log(item1,item2, item3 ,item4);
+console.log(num1,num2,others);
+
+////////////////////////////////////////////////////////////////
+
+let numbers = ()=>{
+    return[23,48]
+}
+
+let [a=5,b] = numbers()
+
+console.log(a,b);
+//////////////////////////////////////////////////////////////////
+
+let myObj = {
+    id : 1,
+    Name : 'arman',
+    family : 'hurian',
+    age : 21,
+}
+
+let {Name,id:userId,age,family} = myObj
+
+console.log(userId,Name,family,age);
+
+/////////////////////////////////////////////////////////////////// turnery condition
+
+let Num1 = 12
+let Num2 = 14
+
+Num1 + Num2 === 25 ? console.log('مجموع برابر 25 است') : console.log('مجموع برابر 25 نیست') 
+
+///////////////////////////////////////////////////////////////////
+
+let users = [3,4,21,7,9]
+
+let mapArr = users.map(function(item ,index){
+  console.log(index , item);  
+  return item * 2 
+})
+
+console.log(mapArr);
+/////////////////////////////////////////////////////////////////////
+
+let BtnClick = document.querySelector('.BtnClick')
+
+function clickHandler(){
+   console.log(this);  
+}
+
+BtnClick.addEventListener('click',clickHandler)
+
+///////////////
+function thisClick (){
+    console.log(this);
+}
+
+thisClick()
+
+let obj = {
+    id : 1,
+    name : 'arman',
+    age : 19,
+    showThis : function(){
+        console.log(this);
+    },
+}
+obj.showThis()
+
+let showThisFunc = obj.showThis.bind(obj)
+
+showThisFunc()
+
+/////////////////////////////////////////////////////////////////
+
+let q1 = {
+  id:1,
+  age:21,
+  name:'arman'
+}
+
+let q2 = {
+  id:2,
+  age:25,
+  name:'ali'
+}
+
+
+function showHandler(){
+    console.log(this);
+}
+
+let userQ1= showHandler.bind(q1)
+let userQ2= showHandler.bind(q2)
+
+userQ1()
+userQ2()
+
+
+//////////////////////////////////////////////////////////
+
+function Person(name,age,height){
+    this.firstname = name,
+    this.age = age,
+    this.height = height
+}
+
+let userArman = new Person('arman',26,178)
+let userMehti = new Person('mehti',26,190)
+let userALi = new Person('ali',24,183)
+
+console.log(userArman);
+console.log(userMehti);
+console.log(userALi);
+
+/////////////////////////////////////////////////////////////
+
+class Piople {
+
+    constructor(name , age , height){
+
+        this.firstname = name
+        this.age = age
+        this.height = height
+    }
+
+}
+
+class Children extends Piople {
+    constructor(name , age , height,fatherName){
+        super(name , age , height)
+        this.fatherName = fatherName
+    } 
+}
+
+let alikocholo = new Children ('alikocholo' ,12,160,'ali akbar')
+ 
+console.log(alikocholo);
+
+let userMamad = new Piople('mamad',26,178)
+let userTaghi = new Piople('taghi',26,190)
+let userNaghi = new Piople('naghi',24,183)
+
+console.log(userMamad);
+console.log(userTaghi);
+console.log(userNaghi);
+
+//////////////////////////////////////////////////////////////
+
+let userObj = {
+    id:2,
+    age:25,
+    firstname:'ali'
+  }
+
+console.log(`id : ${userObj.id}
+age : ${userObj.age} 
+firstname:${userObj.firstname} `);  
