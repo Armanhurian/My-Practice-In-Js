@@ -45,6 +45,76 @@
     position: relative;
 }
 
+option[value ="Tehran"]{
+    color: red;
+}
+
+ul > li[class="li-list"] {
+    background-color: blue;
+}
+
+#first.myFontText{
+    color: brown;
+    font-weight: bold;
+} 
+
+ul .mydev{
+    font-weight: bold;
+}
+
+ul .li-list{
+    font-weight: bold;
+    color: blueviolet;
+}
+
+ul > li[class="mydev"]::after{
+    content: ' after';
+    background-color: coral;
+}
+
+.btnCatch::after{
+    content: ' after';
+    color: red;
+}
+
+.btnCatch:hover{
+    background-color: blueviolet;
+    color: white;
+}
+
+.BtnClick:active{
+    background-color: royalblue;
+    color: white;
+}
+
+.myPElem:any-link{
+    color: yellowgreen;
+}
+
+
+.pElement::first-letter{
+    font-weight: bold;
+    
+}
+
+input[type='radio']:checked{
+  border: 3px solid orange;
+  box-shadow: 0 0 0 3px orange;
+}
+input[type='radio']:checked + label{
+ color: red;
+}
+input[type='checkBox']:checked + label{
+ color: red;
+}
+
+input[type="checkBox"]:checked{
+    box-shadow: 0 0 0 3px hotpink;
+}
+.pElement::first-line{
+    font-weight: bold;
+}
+
 @keyframes animate {
     from{top: 0px;}
     to{top:180px}

@@ -636,3 +636,37 @@ let userObj = {
 console.log(`id : ${userObj.id}
 age : ${userObj.age} 
 firstname:${userObj.firstname} `);  
+
+///////////////////////////////////////////////////////////////
+let arrr  = [2,4,5,7,8,9]
+
+let sumArray = arrr.reduce(function(prev,current){
+    console.log(prev,current);
+    return prev + current
+})
+
+console.log(`sum is : ${sumArray}`);
+
+///////////////////////////////////////////////////////////////////
+
+let shoppingCart = [
+    {id:1 , name:'airdrop' , price:12000000},
+    {id:2 , name:'laptop' , price:16000000},
+    {id:3 , name:'phone' , price:5000000},
+    {id:4 , name:'coolpad' , price:1200000},
+]
+
+let priceShoppingCart= shoppingCart.reduce(function(prev,current){
+    console.log(prev,current);
+
+    if(prev.price){
+
+        return prev.price + current.price
+    }else{
+        return prev + current.price
+    }
+    
+    
+})
+
+console.log(priceShoppingCart);
